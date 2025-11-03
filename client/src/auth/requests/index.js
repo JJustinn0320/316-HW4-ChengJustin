@@ -19,40 +19,35 @@
 const BASE_URL = 'http://localhost:4000/auth';
 
 const handleResponse = async (response) => {
+    // axios response schema
+    let newResponse = { 
+        data: {},
+        status:  response.status,
+        statusText: response.statusText, 
+        headers: response.headers
+        // config: {},
+        // request: {}
+    }
+
+    const contentType = response.headers.get('content-type');
+    const hasJson = contentType && contentType.includes('application/json');
+
     if(response.ok) {
-        // Check if response has content
-        const contentType = response.headers.get('content-type');
-        if (contentType && contentType.includes('application/json')) {
-            const data = await response.json();
-            return {
-                data: data,
-                status: response.status,
-                statusText: response.statusText
-            };
-        } else {
-            // For empty or non-JSON responses (like logout)
-            return {
-                data: {}, // Return empty object instead of trying to parse
-                status: response.status,
-                statusText: response.statusText
-            };
+        if (hasJson) {
+            newResponse.data = await response.json();
         }
     }
-    
-    // For error responses
-    const contentType = response.headers.get('content-type');
-    let errorData = {};
-    if (contentType && contentType.includes('application/json')) {
-        errorData = await response.json().catch(() => ({}));
+    else{
+
+        if (hasJson) {
+            newResponse.data = await response.json().catch(() => ({}));
+        }
+
+        const error = new Error(newResponse.data.message || `Request failed with status ${response.status}`);
+        error.response = newResponse;
+        throw error;
     }
-    
-    const error = new Error(errorData.message || `HTTP error - status: ${response.status}`);
-    error.response = {
-        data: errorData,
-        status: response.status,
-        statusText: response.statusText
-    };
-    throw error;
+    return newResponse;
 }
 
 // THESE ARE ALL THE REQUESTS WE`LL BE MAKING, ALL REQUESTS HAVE A
