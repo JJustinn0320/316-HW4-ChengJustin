@@ -18,6 +18,15 @@
             "playlists": [
                 "68f526c4ec1ea2ad00a6fae8"
             ]
+        },
+        {
+            "firstName": "Justin",
+            "lastName": "Cheng",
+            "email": "justincheng0320@gmail.com",
+            "passwordHash": "$2a$10$m3CK/MyJisdUSRNxTpBrJ.h1IH6pVgpYjKHXk877Z0kYL/8fVhEeC",
+            "playlists": [
+                "68f526c4ec1ea2ad00a6f100"
+            ]
         }
     ],
     "playlists": [
@@ -207,6 +216,133 @@
                     "artist": "The Clash",
                     "year": 1979,
                     "youTubeId": "uEK9oK02D1M"
+                }
+            ]
+        },
+        {
+            "_id": "68f524b611e0f3901871f100",
+            "ownerEmail": "justincheng0320@gmail.com",
+            "name": "Faves",
+            "songs": [
+                {
+                    "title": "Flowers",
+                    "artist": "Miley Cyrus",
+                    "year": 2023,
+                    "youTubeId": "G7KNmW9a75Y"
+                },
+                {
+                    "title": "Kill Bill",
+                    "artist": "SZA",
+                    "year": 2022,
+                    "youTubeId": "v5X5FE7PSlM"
+                },
+                {
+                    "title": "As It Was",
+                    "artist": "Harry Styles",
+                    "year": 2022,
+                    "youTubeId": "H5v3kku4y6Q"
+                },
+                {
+                    "title": "Good 4 U",
+                    "artist": "Olivia Rodrigo",
+                    "year": 2021,
+                    "youTubeId": "gNi_6U5Pm_o"
+                },
+                {
+                    "title": "Blinding Lights",
+                    "artist": "The Weeknd",
+                    "year": 2020,
+                    "youTubeId": "4NRXx6U8ABQ"
+                },
+                {
+                    "title": "Levitating",
+                    "artist": "Dua Lipa",
+                    "year": 2020,
+                    "youTubeId": "TUVcZfQe-Kw"
+                },
+                {
+                    "title": "Easy On Me",
+                    "artist": "Adele",
+                    "year": 2021,
+                    "youTubeId": "X-yIEMduRXk"
+                },
+                {
+                    "title": "Anti-Hero",
+                    "artist": "Taylor Swift",
+                    "year": 2022,
+                    "youTubeId": "b1kbLwvqugk"
+                },
+                {
+                    "title": "Stay",
+                    "artist": "The Kid LAROI & Justin Bieber",
+                    "year": 2021,
+                    "youTubeId": "kTJczUoc26U"
+                },
+                {
+                    "title": "Heat Waves",
+                    "artist": "Glass Animals",
+                    "year": 2020,
+                    "youTubeId": "mRD0GUxFnky"
+                },
+                {
+                    "title": "Drivers License",
+                    "artist": "Olivia Rodrigo",
+                    "year": 2021,
+                    "youTubeId": "ZmDBbnmKpqQ"
+                },
+                {
+                    "title": "Save Your Tears",
+                    "artist": "The Weeknd",
+                    "year": 2020,
+                    "youTubeId": "XXYlFuWEuKI"
+                },
+                {
+                    "title": "Watermelon Sugar",
+                    "artist": "Harry Styles",
+                    "year": 2020,
+                    "youTubeId": "E07s5ZYygMg"
+                },
+                {
+                    "title": "Don't Start Now",
+                    "artist": "Dua Lipa",
+                    "year": 2020,
+                    "youTubeId": "oygrmJFKYZY"
+                },
+                {
+                    "title": "WAP",
+                    "artist": "Cardi B ft. Megan Thee Stallion",
+                    "year": 2020,
+                    "youTubeId": "hsm4poTWjMs"
+                },
+                {
+                    "title": "Montero (Call Me By Your Name)",
+                    "artist": "Lil Nas X",
+                    "year": 2021,
+                    "youTubeId": "6swmTBVI83k"
+                },
+                {
+                    "title": "Industry Baby",
+                    "artist": "Lil Nas X & Jack Harlow",
+                    "year": 2021,
+                    "youTubeId": "UTHLKHL_whs"
+                },
+                {
+                    "title": "Shivers",
+                    "artist": "Ed Sheeran",
+                    "year": 2021,
+                    "youTubeId": "Il0S8BoucSA"
+                },
+                {
+                    "title": "Peaches",
+                    "artist": "Justin Bieber ft. Daniel Caesar & Giveon",
+                    "year": 2021,
+                    "youTubeId": "tQ0yjYUFKAE"
+                },
+                {
+                    "title": "Vampire",
+                    "artist": "Olivia Rodrigo",
+                    "year": 2023,
+                    "youTubeId": "27F_W3xQMzU"
                 }
             ]
         }

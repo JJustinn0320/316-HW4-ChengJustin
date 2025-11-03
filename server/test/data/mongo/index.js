@@ -32,7 +32,7 @@ async function resetMongo() {
 
 const mongoose = require('mongoose')
 mongoose
-    .connect(process.env.DB_CONNECT, { useNewUrlParser: true })
+    .connect(process.env.MONGODB_URI, { useNewUrlParser: true })
     .then(() => { resetMongo() })
     .catch(e => {
         console.error('Connection error', e.message)
