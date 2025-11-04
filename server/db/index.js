@@ -1,15 +1,13 @@
+const DatabaseFactory = require('./database-factory');
 
-const mongoose = require('mongoose')
-const dotenv = require('dotenv')
-dotenv.config();
+// Create and export the database manager instance directly
+const db = DatabaseFactory.createDatabaseManager();
 
-mongoose
-    .connect(process.env.DB_CONNECT, { useNewUrlParser: true })
-    .catch(e => {
-        console.error('Connection error', e.message)
-    })
+// Initialize database
+db.connect().then(() => {
+    console.log(`Database ${process.env.DB_TYPE || 'mongodb'} initialized successfully`);
+}).catch(error => {
+    console.error('Database connection error:', error);
+});
 
-const db = mongoose.connection
-
-module.exports = db
-
+module.exports = db;

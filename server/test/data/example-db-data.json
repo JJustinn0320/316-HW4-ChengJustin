@@ -222,6 +222,133 @@
         {
             "_id": "68f524b611e0f3901871f100",
             "ownerEmail": "justincheng0320@gmail.com",
+            "name": "Oldies",
+            "songs": [
+                {
+                    "title": "Johnny B. Goode",
+                    "artist": "Chuck Berry",
+                    "year": 1958,
+                    "youTubeId": "6ROwVrF0Ceg"
+                },
+                {
+                    "title": "What'd I Say",
+                    "artist": "Ray Charles",
+                    "year": 1959,
+                    "youTubeId": "HAjeSS3kktA"
+                },
+                {
+                    "title": "My Girl",
+                    "artist": "The Temptations",
+                    "year": 1964,
+                    "youTubeId": "C_CSjcmOV1w"
+                },
+                {
+                    "title": "Respect",
+                    "artist": "Aretha Franklin",
+                    "year": 1967,
+                    "youTubeId": "6FOUqQt3Kg0"
+                },
+                {
+                    "title": "Hey Jude",
+                    "artist": "The Beatles",
+                    "year": 1968,
+                    "youTubeId": "A_MjCqQoLLA"
+                },
+                {
+                    "title": "(Sittin' On) The Dock of the Bay",
+                    "artist": "Otis Redding",
+                    "year": 1968,
+                    "youTubeId": "rTVjnBo96Ug"
+                },
+                {
+                    "title": "Whole Lotta Love",
+                    "artist": "Led Zeppelin",
+                    "year": 1969,
+                    "youTubeId": "HQmmM_qwG4k"
+                },
+                {
+                    "title": "Imagine",
+                    "artist": "John Lennon",
+                    "year": 1971,
+                    "youTubeId": "DVg2EJvvlF8"
+                },
+                {
+                    "title": "Let's Stay Together",
+                    "artist": "Al Green",
+                    "year": 1971,
+                    "youTubeId": "COiIC3A0ROM"
+                },
+                {
+                    "title": "Superstition",
+                    "artist": "Stevie Wonder",
+                    "year": 1972,
+                    "youTubeId": "0CFuCYNx-1g"
+                },
+                {
+                    "title": "Bohemian Rhapsody",
+                    "artist": "Queen",
+                    "year": 1975,
+                    "youTubeId": "fJ9rUzIMcZQ"
+                },
+                {
+                    "title": "Hotel California",
+                    "artist": "Eagles",
+                    "year": 1976,
+                    "youTubeId": "qeMFqkcPYcg"
+                },
+                {
+                    "title": "Stayin' Alive",
+                    "artist": "Bee Gees",
+                    "year": 1977,
+                    "youTubeId": "fNFzfwLM72c"
+                },
+                {
+                    "title": "Sweet Home Alabama",
+                    "artist": "Lynyrd Skynyrd",
+                    "year": 1974,
+                    "youTubeId": "ye5BuYf4qT8"
+                },
+                {
+                    "title": "Blowin' in the Wind",
+                    "artist": "Bob Dylan",
+                    "year": 1963,
+                    "youTubeId": "G58XWF6B3AA"
+                },
+                {
+                    "title": "Good Vibrations",
+                    "artist": "The Beach Boys",
+                    "year": 1966,
+                    "youTubeId": "6LkOUYf2A-4"
+                },
+                {
+                    "title": "Purple Haze",
+                    "artist": "The Jimi Hendrix Experience",
+                    "year": 1967,
+                    "youTubeId": "WGoDaYjdfSg"
+                },
+                {
+                    "title": "Brown Sugar",
+                    "artist": "The Rolling Stones",
+                    "year": 1971,
+                    "youTubeId": "b7dUu4kW0TM"
+                },
+                {
+                    "title": "Dream On",
+                    "artist": "Aerosmith",
+                    "year": 1973,
+                    "youTubeId": "89dGC8de0CA"
+                },
+                {
+                    "title": "I Will Survive",
+                    "artist": "Gloria Gaynor",
+                    "year": 1978,
+                    "youTubeId": "ARt9HVcOsaY"
+                }
+            ]
+        },
+        {
+            "_id": "68f524b611e0f3901871f101",
+            "ownerEmail": "justincheng0320@gmail.com",
             "name": "Faves",
             "songs": [
                 {
@@ -343,6 +470,133 @@
                     "artist": "Olivia Rodrigo",
                     "year": 2023,
                     "youTubeId": "27F_W3xQMzU"
+                }
+            ]
+        },
+        {
+            "_id": "68f524b611e0f3901871f102",
+            "ownerEmail": "justincheng0320@gmail.com",
+            "name": "Randos",
+            "songs": [
+                {
+                    "title": "Revolution 9",
+                    "artist": "The Beatles",
+                    "year": 1968,
+                    "youTubeId": "u3j4QKxrocE"
+                },
+                {
+                    "title": "The Revolution Will Not Be Televised",
+                    "artist": "Gil Scott-Heron",
+                    "year": 1971,
+                    "youTubeId": "qGaoXAwl9kw"
+                },
+                {
+                    "title": "I Zimbra",
+                    "artist": "Talking Heads",
+                    "year": 1979,
+                    "youTubeId": "uLc4rOZTSQA"
+                },
+                {
+                    "title": "Fitter Happier",
+                    "artist": "Radiohead",
+                    "year": 1997,
+                    "youTubeId": "xMl_n7W4g6k"
+                },
+                {
+                    "title": "Popcorn",
+                    "artist": "Hot Butter",
+                    "year": 1972,
+                    "youTubeId": "QrFg2aF3Jkw"
+                },
+                {
+                    "title": "Alvin Row",
+                    "artist": "Animal Collective",
+                    "year": 2005,
+                    "youTubeId": "P0Q4JaLlllI"
+                },
+                {
+                    "title": "Trans-Europe Express",
+                    "artist": "Kraftwerk",
+                    "year": 1977,
+                    "youTubeId": "SE3lcJQGL4c"
+                },
+                {
+                    "title": "The Black Angel's Death Song",
+                    "artist": "The Velvet Underground",
+                    "year": 1967,
+                    "youTubeId": "saxgR7y9JcI"
+                },
+                {
+                    "title": "Tubular Bells (Pt. I)",
+                    "artist": "Mike Oldfield",
+                    "year": 1973,
+                    "youTubeId": "TXsxQNf36-c"
+                },
+                {
+                    "title": "The Great Pretender",
+                    "artist": "The Platters",
+                    "year": 1955,
+                    "youTubeId": "6WID8FUxGgE"
+                },
+                {
+                    "title": "Cars",
+                    "artist": "Gary Numan",
+                    "year": 1979,
+                    "youTubeId": "Lv4U-1n4Np4"
+                },
+                {
+                    "title": "The End",
+                    "artist": "The Doors",
+                    "year": 1967,
+                    "youTubeId": "VScSEa1DafY"
+                },
+                {
+                    "title": "A Day in the Life",
+                    "artist": "The Beatles",
+                    "year": 1967,
+                    "youTubeId": "usNsCeOV4GM"
+                },
+                {
+                    "title": "Close to the Edge",
+                    "artist": "Yes",
+                    "year": 1972,
+                    "youTubeId": "e1xCO0Y1Pvo"
+                },
+                {
+                    "title": "The Lark Ascending",
+                    "artist": "Ralph Vaughan Williams",
+                    "year": 1920,
+                    "youTubeId": "ZR2JlDnT2l8"
+                },
+                {
+                    "title": "The Carnival is Over",
+                    "artist": "The Seekers",
+                    "year": 1965,
+                    "youTubeId": "tRrc8g1yc6Y"
+                },
+                {
+                    "title": "The Sound of Silence",
+                    "artist": "Simon & Garfunkel",
+                    "year": 1964,
+                    "youTubeId": "4fWyzwo1xg0"
+                },
+                {
+                    "title": "The Man Who Sold the World",
+                    "artist": "David Bowie",
+                    "year": 1970,
+                    "youTubeId": "w6ZG1lz7L_8"
+                },
+                {
+                    "title": "The Logical Song",
+                    "artist": "Supertramp",
+                    "year": 1979,
+                    "youTubeId": "4D2fLtThp4c"
+                },
+                {
+                    "title": "The Message",
+                    "artist": "Grandmaster Flash & The Furious Five",
+                    "year": 1982,
+                    "youTubeId": "g6l6h-MA1zI"
                 }
             ]
         }

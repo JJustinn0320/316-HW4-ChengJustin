@@ -18,17 +18,21 @@ app.use(cors({
 app.use(express.json())
 app.use(cookieParser())
 
+// INITIALIZE OUR DATABASE OBJECT
+const db = require('./db')
+
+// Make database available to all routes
+app.use((req, res, next) => {
+    req.db = db;
+    next();
+});
+
 // SETUP OUR OWN ROUTERS AS MIDDLEWARE
 const authRouter = require('./routes/auth-router')
 app.use('/auth', authRouter)
 const storeRouter = require('./routes/store-router')
 app.use('/store', storeRouter)
 
-// INITIALIZE OUR DATABASE OBJECT
-const db = require('./db')
-db.on('error', console.error.bind(console, 'Database connection error:'))
 
 // PUT THE SERVER IN LISTENING MODE
 app.listen(PORT, () => console.log(`Playlister Server running on port ${PORT}`))
-
-

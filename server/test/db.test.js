@@ -1,7 +1,10 @@
 import { beforeAll, beforeEach, afterEach, afterAll, expect, test } from 'vitest';
 const dotenv = require('dotenv').config({ path: __dirname + '/.env' });
-const mongoose = require('mongoose')
+//const mongoose = require('mongoose')
+const DatabaseFactory = require('../db/database-factory');
 
+// Create  the database manager 
+const db = DatabaseFactory.createDatabaseManager();
 /**
  * Vitest test script for the Playlister app's Mongo Database Manager. Testing should verify that the Mongo Database Manager 
  * will perform all necessarily operations properly.
@@ -21,11 +24,17 @@ const mongoose = require('mongoose')
 beforeAll(async () => {
     // SETUP THE CONNECTION VIA MONGOOSE JUST ONCE - IT IS IMPORTANT TO NOTE THAT INSTEAD
     // OF DOING THIS HERE, IT SHOULD BE DONE INSIDE YOUR Database Manager (WHICHEVER)
-    await mongoose
-        .connect(process.env.DB_CONNECT, { useNewUrlParser: true })
-        .catch(e => {
-            console.error('Connection error', e.message)
-        })
+    // await mongoose
+    //     .connect(process.env.DB_CONNECT, { useNewUrlParser: true })
+    //     .catch(e => {
+    //         console.error('Connection error', e.message)
+    //     })
+    console.log("Starting vitest...")
+    db.connect().then(() => {
+        console.log(`Database ${process.env.DB_TYPE || 'mongodb'} initialized successfully`);
+    }).catch(error => {
+        console.error('Database connection error:', error);
+    });
 });
 
 /**
