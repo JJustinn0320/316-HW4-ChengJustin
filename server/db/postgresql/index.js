@@ -45,35 +45,36 @@ class PostgreSQLManager extends DatabaseManager {
     async defineModels() {
         // User Model - use INTEGER to match your database
         this.User = this.sequelize.define('User', {
-            id: {
-                type: DataTypes.INTEGER,
-                autoIncrement: true,
-                primaryKey: true
-            },
-            firstName: {
-                type: DataTypes.STRING,
-                allowNull: false,
-                field: 'firstName'
-            },
-            lastName: {
-                type: DataTypes.STRING,
-                allowNull: false,
-                field: 'lastName'
-            },
-            email: {
-                type: DataTypes.STRING,
-                allowNull: false,
-                unique: true
-            },
-            passwordHash: {
-                type: DataTypes.STRING,
-                allowNull: false,
-                field: 'passwordHash'
-            },
-            playlists: {
-                type: DataTypes.ARRAY(DataTypes.INTEGER),
-                defaultValue: []
-            }
+                _id: {
+            type: DataTypes.UUID,
+            defaultValue: DataTypes.UUIDV4, // Auto-generate UUID
+            primaryKey: true,
+            field: '_id'
+        },
+        firstName: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            field: 'firstName'
+        },
+        lastName: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            field: 'lastName'
+        },
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true
+        },
+        passwordHash: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            field: 'passwordHash'
+        },
+        playlists: {
+            type: DataTypes.ARRAY(DataTypes.STRING), 
+            defaultValue: []
+        }
         }, {
             tableName: 'users',
             timestamps: true
@@ -81,30 +82,30 @@ class PostgreSQLManager extends DatabaseManager {
 
         // Playlist Model - FIX: Add id: false
         this.Playlist = this.sequelize.define('Playlist', {
-            _id: {
-                type: DataTypes.INTEGER,
-                primaryKey: true,
-                autoIncrement: true,
-                field: '_id'
-            },
-            name: {
-                type: DataTypes.STRING,
-                allowNull: false
-            },
-            songs: {
-                type: DataTypes.JSONB,
-                allowNull: false,
-                defaultValue: []
-            },
-            ownerEmail: {
-                type: DataTypes.STRING,
-                allowNull: false,
-                field: 'ownerEmail'
-            }
+                _id: {
+            type: DataTypes.UUID, // Change to UUID
+            defaultValue: DataTypes.UUIDV4, // Auto-generate UUID
+            primaryKey: true,
+            field: '_id'
+        },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        ownerEmail: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            field: 'ownerEmail'
+        },
+        songs: {
+            type: DataTypes.JSONB,
+            allowNull: false,
+            defaultValue: []
+        }
         }, {
-            tableName: 'playlists',
+            tableName: 'playlists',  
             timestamps: true,
-            id: false  // ADD THIS LINE - tells Sequelize not to use default id field
+            id: false  
         });
 
         // Define associations
@@ -123,6 +124,9 @@ class PostgreSQLManager extends DatabaseManager {
     normalizeUser(user) {
         if (!user) return null;
         const userData = user.get ? user.get({ plain: true }) : user;
+
+        userData.id = userData._id;
+
         return userData;
     }
 
@@ -161,7 +165,7 @@ class PostgreSQLManager extends DatabaseManager {
     async updateUserPlaylists(userId, playlistIds) {
         const options = { 
             transaction: this.transaction,
-            where: { id: userId },
+            where: { _id: userId },
             returning: true
         };
         
@@ -232,6 +236,15 @@ class PostgreSQLManager extends DatabaseManager {
         const result = await this.Playlist.destroy(options);
         return result > 0;
     }
+
+    async deleteUser(id) {
+        const deletedRow = await this.User.destroy({
+        where: {
+            _id: id,
+        },
+        });
+        console.log(`${deletedRow} deleted.`);
     }
+}
 
 module.exports = PostgreSQLManager;

@@ -51,6 +51,10 @@ class DatabaseManager {
     async deletePlaylist(id) {
         throw new Error("Method 'deletePlaylist()' must be implemented");
     }
+
+    async deleteUser(id) {
+        throw new Error("Method 'deleteUser()' must be implemented");
+    }
 }
 
 module.exports = DatabaseManager;

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const DatabaseManager = require('../DatabaseManager'); 
+const { INTEGER } = require('sequelize');
 
 class MongoDBManager extends DatabaseManager {
     constructor() {
@@ -24,8 +25,9 @@ class MongoDBManager extends DatabaseManager {
         const playlistSchema = new mongoose.Schema({
             name: { type: String, required: true },
             songs: [{
-                title: { type: String, required: true },
                 artist: { type: String, required: true },
+                title: { type: String, required: true },
+                year: {type: Number, required: true},
                 youTubeId: { type: String, required: true }
             }],
             ownerEmail: { type: String, required: true }
@@ -129,6 +131,10 @@ class MongoDBManager extends DatabaseManager {
     async deletePlaylist(id) {
         const result = await this.Playlist.findOneAndDelete({ _id: id });
         return !!result;
+    }
+
+    async deleteUser(id) {
+        const result = await this.User.findOneAndDelete({ _id: id });
     }
 }
 

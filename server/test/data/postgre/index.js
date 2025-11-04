@@ -10,10 +10,11 @@ const sequelize = new Sequelize(process.env.POSTGRES_URI, {
 });
 
 const User = sequelize.define('user', {
-    id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey: true
+    _id: {
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4, // Auto-generate UUID
+        primaryKey: true,
+        field: '_id'
     },
     firstName: {
         type: DataTypes.STRING,
@@ -36,9 +37,9 @@ const User = sequelize.define('user', {
         field: 'passwordHash'
     },
     playlists: {
-        type: DataTypes.ARRAY(DataTypes.INTEGER),  // Changed to INTEGER array
+        type: DataTypes.ARRAY(DataTypes.STRING), 
         defaultValue: []
-    },
+    }
 }, {
     tableName: 'users',  // Added explicit table name
     timestamps: true
@@ -46,29 +47,29 @@ const User = sequelize.define('user', {
 
 const Playlist = sequelize.define('playlist', {
     _id: {
-        type: DataTypes.INTEGER,  // Changed to INTEGER
-        autoIncrement: true,      // Added autoIncrement
+        type: DataTypes.UUID, // Change to UUID
+        defaultValue: DataTypes.UUIDV4, // Auto-generate UUID
         primaryKey: true,
         field: '_id'
+    },
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false
     },
     ownerEmail: {
         type: DataTypes.STRING,
         allowNull: false,
         field: 'ownerEmail'
     },
-    name: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
     songs: {
         type: DataTypes.JSONB,
         allowNull: false,
         defaultValue: []
-    },
+    }
 }, {
-    tableName: 'playlists',  // Added explicit table name
+    tableName: 'playlists',  
     timestamps: true,
-    id: false  // Added to disable default id field
+    id: false  
 })
 
 // Change the association name
